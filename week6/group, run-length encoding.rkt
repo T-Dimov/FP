@@ -6,8 +6,7 @@
       [(empty? lst) res]
       [(not (p (first lst))) res]
       [else (help (cons (first lst) res) (rest lst))]))
-  (reverse (help (list) items))
-    )
+  (reverse (help (list) items)))
 
 (define (drop-while p items)
   (define (help res)
@@ -15,8 +14,7 @@
       [(empty? res) res]
       [(not (p (first res))) res]
       [else (help (rest res))]))
-  (help items)
-  )
+  (help items))
 
 (define (group input)
   (define (help res lst)
@@ -71,5 +69,4 @@
                     (string-append res
                                    (string-repeat (string letter)
                                                   times)))])))
-  (help input "")
-  )
+  (help input ""))
